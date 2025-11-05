@@ -1,0 +1,9 @@
+dotnet ef migrations add initial --startup-project=NewSamDU.Api --project=NewSamDU.Infrastructure
+
+
+dotnet ef migrations remove --startup-project=NewSamDU.Api --project=NewSamDU.Infrastructure
+
+
+dotnet ef database update --startup-project=NewSamDU.Api --project=NewSamDU.Infrastructure
+
+dotnet ef database drop --startup-project=NewSamDU.Api --project=NewSamDU.Infrastructure

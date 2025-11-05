@@ -1,0 +1,17 @@
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\bin\Debug\net9.0\NewSamDU.Infrastructure.deps.json
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\bin\Debug\net9.0\NewSamDU.Infrastructure.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\bin\Debug\net9.0\NewSamDU.Infrastructure.pdb
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\bin\Debug\net9.0\NewSamDU.Application.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\bin\Debug\net9.0\NewSamDU.Domain.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\bin\Debug\net9.0\NewSamDU.Application.pdb
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\bin\Debug\net9.0\NewSamDU.Domain.pdb
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.csproj.AssemblyReference.cache
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.AssemblyInfo.cs
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.07F0B2DF.Up2Date
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\refint\NewSamDU.Infrastructure.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.pdb
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\ref\NewSamDU.Infrastructure.dll

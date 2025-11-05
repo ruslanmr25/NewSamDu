@@ -1,0 +1,671 @@
+{
+  "Version": 1,
+  "Hash": "mZAUXemBY3fyJrEGmW+t72nPiZVnVzWpJxW1PRKTXwU=",
+  "Source": "NewSamDU.Api",
+  "BasePath": "_content/NewSamDU.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NewSamDU.Api\\wwwroot",
+      "Source": "NewSamDU.Api",
+      "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\",
+      "BasePath": "_content/NewSamDU.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "SourceId": "NewSamDU.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/NewSamDU.Api",
+      "RelativePath": "uploads/New Text Document#[.{fingerprint=5ipweew5fc}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt"
+    },
+    {
+      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\images\\1.jpg",
+      "SourceId": "NewSamDU.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\",
+      "BasePath": "_content/NewSamDU.Api",
+      "RelativePath": "images/1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2xnl6vtwzp",
+      "Integrity": "Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn+ycOe1IDfwqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1.jpg"
+    },
+    {
+      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\images\\2.png",
+      "SourceId": "NewSamDU.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\",
+      "BasePath": "_content/NewSamDU.Api",
+      "RelativePath": "images/2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qox1wrtp75",
+      "Integrity": "NiOnCW4TiAG/Jc7VpS4A/pHGT9HU+WYikfD9wtTBvPE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2.png"
+    },
+    {
+      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\20251105_115001474_9 -ma'ruza informatika asoslari.ppt",
+      "SourceId": "NewSamDU.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\",
+      "BasePath": "_content/NewSamDU.Api",
+      "RelativePath": "uploads/20251105_115001474_9 -ma'ruza informatika asoslari#[.{fingerprint}]?.ppt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zl5hsgn2l1",
+      "Integrity": "Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\20251105_115001474_9 -ma'ruza informatika asoslari.ppt"
+    },
+    {
+      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt",
+      "SourceId": "NewSamDU.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\",
+      "BasePath": "_content/NewSamDU.Api",
+      "RelativePath": "uploads/New Text Document#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\New Text Document.txt"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/1.2xnl6vtwzp.jpg",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\images\\1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4411974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn+ycOe1IDfwqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Oct 2025 03:58:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2xnl6vtwzp"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn+ycOe1IDfwqk="
+        }
+      ]
+    },
+    {
+      "Route": "images/1.jpg",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\images\\1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4411974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn+ycOe1IDfwqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Oct 2025 03:58:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn+ycOe1IDfwqk="
+        }
+      ]
+    },
+    {
+      "Route": "images/2.png",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\images\\2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "291109"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NiOnCW4TiAG/Jc7VpS4A/pHGT9HU+WYikfD9wtTBvPE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Oct 2025 03:35:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NiOnCW4TiAG/Jc7VpS4A/pHGT9HU+WYikfD9wtTBvPE="
+        }
+      ]
+    },
+    {
+      "Route": "images/2.qox1wrtp75.png",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\images\\2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "291109"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NiOnCW4TiAG/Jc7VpS4A/pHGT9HU+WYikfD9wtTBvPE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Oct 2025 03:35:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qox1wrtp75"
+        },
+        {
+          "Name": "label",
+          "Value": "images/2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NiOnCW4TiAG/Jc7VpS4A/pHGT9HU+WYikfD9wtTBvPE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/20251105_115001474_9 -ma'ruza informatika asoslari.ppt",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\20251105_115001474_9 -ma'ruza informatika asoslari.ppt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6628864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-powerpoint"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:50:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/20251105_115001474_9 -ma'ruza informatika asoslari.zl5hsgn2l1.ppt",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\20251105_115001474_9 -ma'ruza informatika asoslari.ppt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6628864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-powerpoint"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:50:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zl5hsgn2l1"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/20251105_115001474_9 -ma'ruza informatika asoslari.ppt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/New Text Document.5ipweew5fc.txt",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "1.000000000000"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/New Text Document.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/New Text Document.5ipweew5fc.txt",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/New Text Document.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/New Text Document.5ipweew5fc.txt.gz",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/New Text Document.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/New Text Document.txt",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "1.000000000000"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/New Text Document.txt",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/New Text Document.txt.gz",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    }
+  ]
+}

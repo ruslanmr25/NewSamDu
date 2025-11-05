@@ -1,0 +1,52 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/images/1.2xnl6vtwzp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2xnl6vtwzp"},{"Name":"integrity","Value":"sha256-Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn\u002BycOe1IDfwqk="},{"Name":"label","Value":"_content/NewSamDU.Api/images/1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4411974"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn\u002BycOe1IDfwqk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Oct 2025 03:58:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/images/1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn\u002BycOe1IDfwqk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"4411974"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Vt72No/9XeNwv0pAZTt5pN7ldCb6fJn\u002BycOe1IDfwqk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Oct 2025 03:58:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/images/2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NiOnCW4TiAG/Jc7VpS4A/pHGT9HU\u002BWYikfD9wtTBvPE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"291109"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022NiOnCW4TiAG/Jc7VpS4A/pHGT9HU\u002BWYikfD9wtTBvPE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Oct 2025 03:35:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/images/2.qox1wrtp75.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qox1wrtp75"},{"Name":"integrity","Value":"sha256-NiOnCW4TiAG/Jc7VpS4A/pHGT9HU\u002BWYikfD9wtTBvPE="},{"Name":"label","Value":"_content/NewSamDU.Api/images/2.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"291109"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022NiOnCW4TiAG/Jc7VpS4A/pHGT9HU\u002BWYikfD9wtTBvPE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Oct 2025 03:35:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/uploads/20251105_115001474_9 -ma'ruza informatika asoslari.ppt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251105_115001474_9 -ma'ruza informatika asoslari.ppt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6628864"},{"Name":"Content-Type","Value":"application/vnd.ms-powerpoint"},{"Name":"ETag","Value":"\u0022Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Nov 2025 06:50:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/uploads/20251105_115001474_9 -ma'ruza informatika asoslari.zl5hsgn2l1.ppt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251105_115001474_9 -ma'ruza informatika asoslari.ppt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zl5hsgn2l1"},{"Name":"integrity","Value":"sha256-Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY="},{"Name":"label","Value":"_content/NewSamDU.Api/uploads/20251105_115001474_9 -ma\u0027ruza informatika asoslari.ppt"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6628864"},{"Name":"Content-Type","Value":"application/vnd.ms-powerpoint"},{"Name":"ETag","Value":"\u0022Wf17zqNf7ZbGvZqlAqn4sKNioEK/eUbrhs/D19QukRY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Nov 2025 06:50:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/uploads/New Text Document.5ipweew5fc.txt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\New Text Document.txt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5ipweew5fc"},{"Name":"integrity","Value":"sha256-47DEQpj8HBSa\u002B/TImW\u002B5JCeuQeRkm5NMpJWZG3hSuFU="},{"Name":"label","Value":"_content/NewSamDU.Api/uploads/New Text Document.txt"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"0"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u002247DEQpj8HBSa\u002B/TImW\u002B5JCeuQeRkm5NMpJWZG3hSuFU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Nov 2025 06:09:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/NewSamDU.Api/uploads/New Text Document.txt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\New Text Document.txt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-47DEQpj8HBSa\u002B/TImW\u002B5JCeuQeRkm5NMpJWZG3hSuFU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"0"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u002247DEQpj8HBSa\u002B/TImW\u002B5JCeuQeRkm5NMpJWZG3hSuFU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Nov 2025 06:09:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

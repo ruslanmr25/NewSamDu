@@ -1,0 +1,112 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\visual studio\\NewSamDU\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EDFA27E-3501-47C4-BB0D-28C8DAFBD4DE}|NewSamDU.Api\\NewSamDU.Api.csproj|d:\\projects\\visual studio\\newsamdu\\newsamdu.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EDFA27E-3501-47C4-BB0D-28C8DAFBD4DE}|NewSamDU.Api\\NewSamDU.Api.csproj|solutionrelative:newsamdu.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A49D3F21-3755-4EDB-B30F-26398F8E5DAC}|NewSamDU.Domain\\NewSamDU.Domain.csproj|d:\\projects\\visual studio\\newsamdu\\newsamdu.domain\\entities\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A49D3F21-3755-4EDB-B30F-26398F8E5DAC}|NewSamDU.Domain\\NewSamDU.Domain.csproj|solutionrelative:newsamdu.domain\\entities\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EDFA27E-3501-47C4-BB0D-28C8DAFBD4DE}|NewSamDU.Api\\NewSamDU.Api.csproj|d:\\projects\\visual studio\\newsamdu\\newsamdu.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EDFA27E-3501-47C4-BB0D-28C8DAFBD4DE}|NewSamDU.Api\\NewSamDU.Api.csproj|solutionrelative:newsamdu.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EDFA27E-3501-47C4-BB0D-28C8DAFBD4DE}|NewSamDU.Api\\NewSamDU.Api.csproj|d:\\projects\\visual studio\\newsamdu\\newsamdu.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EDFA27E-3501-47C4-BB0D-28C8DAFBD4DE}|NewSamDU.Api\\NewSamDU.Api.csproj|solutionrelative:newsamdu.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Domain\\Entities\\Menu.cs",
+              "RelativeDocumentMoniker": "NewSamDU.Domain\\Entities\\Menu.cs",
+              "ToolTip": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Domain\\Entities\\Menu.cs",
+              "RelativeToolTip": "NewSamDU.Domain\\Entities\\Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T11:21:43.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "NewSamDU.Api\\WeatherForecast.cs",
+              "ToolTip": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\WeatherForecast.cs",
+              "RelativeToolTip": "NewSamDU.Api\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T11:11:20.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "NewSamDU.Api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "NewSamDU.Api\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T11:11:11.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\Program.cs",
+              "RelativeDocumentMoniker": "NewSamDU.Api\\Program.cs",
+              "ToolTip": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\Program.cs",
+              "RelativeToolTip": "NewSamDU.Api\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T11:10:54.422Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

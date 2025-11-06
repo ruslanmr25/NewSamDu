@@ -146,4 +146,5 @@ D:\Projects\visual studio\NewSamDU\NewSamDU.Api\bin\Debug\net9.0\Microsoft.Ident
 D:\Projects\visual studio\NewSamDU\NewSamDU.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Projects\visual studio\NewSamDU\NewSamDU.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 D:\Projects\visual studio\NewSamDU\NewSamDU.Api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Projects\visual studio\NewSamDU\NewSamDU.Api\obj\Debug\net9.0\compressed\89g39bn48v-5ipweew5fc.gz
+D:\Projects\visual studio\NewSamDU\NewSamDU.Api\obj\Debug\net9.0\NewSamDU.Api.sourcelink.json
+D:\Projects\visual studio\NewSamDU\NewSamDU.Api\obj\Debug\net9.0\compressed\89g39bn48v-111w2chp9b.gz

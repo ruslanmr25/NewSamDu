@@ -15,3 +15,4 @@ D:\Projects\visual studio\NewSamDU\NewSamDU.Application\obj\Debug\net9.0\refint\
 D:\Projects\visual studio\NewSamDU\NewSamDU.Application\obj\Debug\net9.0\NewSamDU.Application.pdb
 D:\Projects\visual studio\NewSamDU\NewSamDU.Application\obj\Debug\net9.0\NewSamDU.Application.genruntimeconfig.cache
 D:\Projects\visual studio\NewSamDU\NewSamDU.Application\obj\Debug\net9.0\ref\NewSamDU.Application.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Application\obj\Debug\net9.0\NewSamDU.Application.sourcelink.json

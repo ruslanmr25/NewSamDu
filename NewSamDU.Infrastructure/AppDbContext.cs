@@ -18,6 +18,8 @@ public class AppDbContext : DbContext
 
     public DbSet<Page> Pages { get; set; }
 
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
+
     public DbSet<Announcement> Announcements { get; set; }
 
     public DbSet<News> News { get; set; }

@@ -45,9 +45,9 @@ builder.Services.AddCors(options =>
         "AllowFrontend",
         policy =>
             policy
-                .WithOrigins(builder.Configuration["FrontendUrl"] ?? "localhost:5040") // frontend manzilingiz
-                .AllowAnyHeader()
-                .AllowAnyMethod()
+                .AllowAnyOrigin() // Har qanday domen (frontend URL) uchun
+                .AllowAnyMethod() // Har qanday HTTP metod (GET, POST, PUT, DELETE va h.k.)
+                .AllowAnyHeader() // Har qanday header
     );
 });
 builder
@@ -114,6 +114,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("AllowFrontend");
 
 app.MapControllers();
 

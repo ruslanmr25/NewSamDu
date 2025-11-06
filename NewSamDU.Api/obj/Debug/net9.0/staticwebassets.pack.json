@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\uploads\\New Text Document.txt"
     },
     {
+      "Id": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\jamshid\\New Microsoft Word Document.docx",
+      "PackagePath": "staticwebassets\\uploads\\jamshid\\New Microsoft Word Document.docx"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.NewSamDU.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

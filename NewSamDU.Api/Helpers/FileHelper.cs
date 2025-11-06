@@ -1,4 +1,5 @@
 using System;
+using NewSamDU.Application.DTOs.FileDTO;
 
 namespace NewSamDU.Api.Helpers;
 
@@ -19,15 +20,37 @@ public class FileHelper
 
     protected FolderHelper folderHelper;
 
-    public List<string> GetFiles(string path = "/")
+    public List<GetFileDTO> GetFiles(string path = "/")
     {
         if (path == "/")
         {
-            return Directory.GetFiles(wwwRootPath).Select(Path.GetFileName).ToList()!;
+            var files = Directory
+                .GetFiles(wwwRootPath)
+                .Select(path => new
+                {
+                    Name = Path.GetFileName(path),
+                    Size = new FileInfo(path).Length, 
+                })
+                .ToList();
+            return Directory
+                .GetFiles(wwwRootPath)
+                .Select(f => new GetFileDTO
+                {
+                    Name = Path.GetFileName(f),
+                    Size = new FileInfo(f).Length / 1024,
+                })
+                .ToList()!;
         }
         path = folderHelper.GetFolderPath(path);
 
-        return Directory.GetFiles(path).Select(Path.GetFileName).ToList()!;
+        return Directory
+            .GetFiles(path)
+            .Select(f => new GetFileDTO
+            {
+                Name = Path.GetFileName(f),
+                Size = new FileInfo(f).Length,
+            })
+            .ToList()!;
     }
 
     public async Task<string> UploadFile(IFormFile file, string folderPath)

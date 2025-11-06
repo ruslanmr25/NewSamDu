@@ -15,3 +15,4 @@ D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewS
 D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\refint\NewSamDU.Infrastructure.dll
 D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.pdb
 D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\ref\NewSamDU.Infrastructure.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Infrastructure\obj\Debug\net9.0\NewSamDU.Infrastructure.sourcelink.json

@@ -9,3 +9,4 @@ D:\Projects\visual studio\NewSamDU\NewSamDU.Domain\obj\Debug\net9.0\NewSamDU.Dom
 D:\Projects\visual studio\NewSamDU\NewSamDU.Domain\obj\Debug\net9.0\refint\NewSamDU.Domain.dll
 D:\Projects\visual studio\NewSamDU\NewSamDU.Domain\obj\Debug\net9.0\NewSamDU.Domain.pdb
 D:\Projects\visual studio\NewSamDU\NewSamDU.Domain\obj\Debug\net9.0\ref\NewSamDU.Domain.dll
+D:\Projects\visual studio\NewSamDU\NewSamDU.Domain\obj\Debug\net9.0\NewSamDU.Domain.sourcelink.json

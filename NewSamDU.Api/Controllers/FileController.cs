@@ -21,7 +21,7 @@ public class FileController : ControllerBase
     public IActionResult GetFiles([FromQuery] FolderQuery query)
     {
         var files = fileHelper.GetFiles(query.Path);
-        return Ok(new Response<List<string>>(files));
+        return Ok(new Response<List<GetFileDTO>>(files));
     }
 
     [HttpPost]

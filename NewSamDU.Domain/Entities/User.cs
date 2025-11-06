@@ -13,4 +13,6 @@ public class User : BaseEntity
     public string Password { get; set; } = string.Empty;
 
     public Role Role { get; set; } = Role.User;
+
+    public List<RefreshToken> RefreshTokens { get; set; }
 }

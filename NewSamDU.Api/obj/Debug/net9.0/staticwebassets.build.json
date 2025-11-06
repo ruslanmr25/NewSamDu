@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mZAUXemBY3fyJrEGmW+t72nPiZVnVzWpJxW1PRKTXwU=",
+  "Hash": "5nGkl7wLuj0pt3BvlDp4hEtDSdn7/XsZmXFs5XkQJaY=",
   "Source": "NewSamDU.Api",
   "BasePath": "_content/NewSamDU.Api",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-111w2chp9b.gz",
       "SourceId": "NewSamDU.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/NewSamDU.Api",
-      "RelativePath": "uploads/New Text Document#[.{fingerprint=5ipweew5fc}]?.txt.gz",
+      "RelativePath": "uploads/New Text Document#[.{fingerprint=111w2chp9b}]?.txt.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -31,8 +31,8 @@
       "RelatedAsset": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "5ipweew5fc",
-      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "Fingerprint": "od67l7x41q",
+      "Integrity": "9CJz0nvEnHmYZzsCkUpC9j/i2zVLuVOBFovZ3pBRRy4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt"
@@ -101,6 +101,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\20251105_115001474_9 -ma'ruza informatika asoslari.ppt"
     },
     {
+      "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\jamshid\\New Microsoft Word Document.docx",
+      "SourceId": "NewSamDU.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\",
+      "BasePath": "_content/NewSamDU.Api",
+      "RelativePath": "uploads/jamshid/New Microsoft Word Document#[.{fingerprint}]?.docx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\jamshid\\New Microsoft Word Document.docx"
+    },
+    {
       "Identity": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt",
       "SourceId": "NewSamDU.Api",
       "SourceType": "Discovered",
@@ -115,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5ipweew5fc",
-      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "Fingerprint": "111w2chp9b",
+      "Integrity": "y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\New Text Document.txt"
@@ -370,15 +391,9 @@
       ]
     },
     {
-      "Route": "uploads/New Text Document.5ipweew5fc.txt",
-      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "1.000000000000"
-        }
-      ],
+      "Route": "uploads/jamshid/New Microsoft Word Document.5ipweew5fc.docx",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\jamshid\\New Microsoft Word Document.docx",
+      "Selectors": [],
       "ResponseHeaders": [
         {
           "Name": "Accept-Ranges",
@@ -389,12 +404,100 @@
           "Value": "0"
         },
         {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
           "Name": "ETag",
           "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+          "Value": "Wed, 05 Nov 2025 07:24:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/jamshid/New Microsoft Word Document.docx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/jamshid/New Microsoft Word Document.docx",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\jamshid\\New Microsoft Word Document.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Nov 2025 07:24:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/New Text Document.111w2chp9b.txt",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-111w2chp9b.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.025641025641"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9CJz0nvEnHmYZzsCkUpC9j/i2zVLuVOBFovZ3pBRRy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:05:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -414,13 +517,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "W/\"y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5ipweew5fc"
+          "Value": "111w2chp9b"
         },
         {
           "Name": "label",
@@ -428,12 +531,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8="
         }
       ]
     },
     {
-      "Route": "uploads/New Text Document.5ipweew5fc.txt",
+      "Route": "uploads/New Text Document.111w2chp9b.txt",
       "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\wwwroot\\uploads\\New Text Document.txt",
       "Selectors": [],
       "ResponseHeaders": [
@@ -443,7 +546,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "18"
         },
         {
           "Name": "Content-Type",
@@ -451,11 +554,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+          "Value": "Thu, 06 Nov 2025 07:05:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -465,7 +568,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5ipweew5fc"
+          "Value": "111w2chp9b"
         },
         {
           "Name": "label",
@@ -473,13 +576,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8="
         }
       ]
     },
     {
-      "Route": "uploads/New Text Document.5ipweew5fc.txt.gz",
-      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "Route": "uploads/New Text Document.111w2chp9b.txt.gz",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-111w2chp9b.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -488,7 +591,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "38"
         },
         {
           "Name": "Content-Type",
@@ -496,11 +599,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"9CJz0nvEnHmYZzsCkUpC9j/i2zVLuVOBFovZ3pBRRy4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+          "Value": "Thu, 06 Nov 2025 07:05:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -518,7 +621,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5ipweew5fc"
+          "Value": "111w2chp9b"
         },
         {
           "Name": "label",
@@ -526,18 +629,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-9CJz0nvEnHmYZzsCkUpC9j/i2zVLuVOBFovZ3pBRRy4="
         }
       ]
     },
     {
       "Route": "uploads/New Text Document.txt",
-      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-111w2chp9b.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "1.000000000000"
+          "Quality": "0.025641025641"
         }
       ],
       "ResponseHeaders": [
@@ -547,15 +650,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "38"
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"9CJz0nvEnHmYZzsCkUpC9j/i2zVLuVOBFovZ3pBRRy4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+          "Value": "Thu, 06 Nov 2025 07:05:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -575,13 +678,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "W/\"y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8="
         }
       ]
     },
@@ -596,7 +699,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "18"
         },
         {
           "Name": "Content-Type",
@@ -604,11 +707,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+          "Value": "Thu, 06 Nov 2025 07:05:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -618,13 +721,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-y/CMH0xBBmjO4EHGphqOytovDGgkGQcovstyPgqktB8="
         }
       ]
     },
     {
       "Route": "uploads/New Text Document.txt.gz",
-      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-5ipweew5fc.gz",
+      "AssetFile": "D:\\Projects\\visual studio\\NewSamDU\\NewSamDU.Api\\obj\\Debug\\net9.0\\compressed\\89g39bn48v-111w2chp9b.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -633,7 +736,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "38"
         },
         {
           "Name": "Content-Type",
@@ -641,11 +744,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"9CJz0nvEnHmYZzsCkUpC9j/i2zVLuVOBFovZ3pBRRy4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Nov 2025 06:09:31 GMT"
+          "Value": "Thu, 06 Nov 2025 07:05:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -663,7 +766,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-9CJz0nvEnHmYZzsCkUpC9j/i2zVLuVOBFovZ3pBRRy4="
         }
       ]
     }

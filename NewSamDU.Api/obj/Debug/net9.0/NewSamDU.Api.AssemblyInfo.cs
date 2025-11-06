@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewSamDU.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96d795978d3e071a4d08ae31eae7f588cbe73261")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a17950a2c730839ed883c39d6ccec142115d0ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewSamDU.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewSamDU.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

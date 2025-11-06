@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NewSamDU.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251105033439_initial")]
+    [Migration("20251105143248_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -248,6 +248,44 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.ToTable("Pages");
                 });
 
+            modelBuilder.Entity("NewSamDU.Domain.Entities.RefreshToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedByIp")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("DeletedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
+                });
+
             modelBuilder.Entity("NewSamDU.Domain.Entities.Slide", b =>
                 {
                     b.Property<int>("Id")
@@ -357,6 +395,17 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Navigation("RelatedPage");
                 });
 
+            modelBuilder.Entity("NewSamDU.Domain.Entities.RefreshToken", b =>
+                {
+                    b.HasOne("NewSamDU.Domain.Entities.User", "User")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("NewSamDU.Domain.Entities.Slide", b =>
                 {
                     b.HasOne("NewSamDU.Domain.Entities.Page", "RelatedPage")
@@ -364,6 +413,11 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasForeignKey("RelatedPageId");
 
                     b.Navigation("RelatedPage");
+                });
+
+            modelBuilder.Entity("NewSamDU.Domain.Entities.User", b =>
+                {
+                    b.Navigation("RefreshTokens");
                 });
 #pragma warning restore 612, 618
         }

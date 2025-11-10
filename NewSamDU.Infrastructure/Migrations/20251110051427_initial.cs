@@ -18,19 +18,22 @@ namespace NewSamDU.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    TitleUz = table.Column<string>(type: "text", nullable: false),
-                    TitleEn = table.Column<string>(type: "text", nullable: false),
-                    TitleRu = table.Column<string>(type: "text", nullable: false),
+                    TitleUz = table.Column<string>(type: "text", nullable: true),
+                    TitleEn = table.Column<string>(type: "text", nullable: true),
+                    TitleRu = table.Column<string>(type: "text", nullable: true),
+                    TitleKr = table.Column<string>(type: "text", nullable: true),
                     DescriptionUz = table.Column<string>(type: "text", nullable: false),
-                    DescriptionRu = table.Column<string>(type: "text", nullable: false),
-                    DescriptionEn = table.Column<string>(type: "text", nullable: false),
-                    ContentUz = table.Column<string>(type: "text", nullable: false),
-                    ContentRu = table.Column<string>(type: "text", nullable: false),
-                    ContentEn = table.Column<string>(type: "text", nullable: false),
+                    DescriptionRu = table.Column<string>(type: "text", nullable: true),
+                    DescriptionEn = table.Column<string>(type: "text", nullable: true),
+                    DescriptionKr = table.Column<string>(type: "text", nullable: true),
+                    ContentUz = table.Column<string>(type: "text", nullable: true),
+                    ContentRu = table.Column<string>(type: "text", nullable: true),
+                    ContentEn = table.Column<string>(type: "text", nullable: true),
+                    ContentKr = table.Column<string>(type: "text", nullable: true),
                     MainImagePath = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -43,21 +46,24 @@ namespace NewSamDU.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    TitleUz = table.Column<string>(type: "text", nullable: false),
-                    TitleEn = table.Column<string>(type: "text", nullable: false),
-                    TitleRu = table.Column<string>(type: "text", nullable: false),
-                    DescriptionUz = table.Column<string>(type: "text", nullable: false),
-                    DescriptionRu = table.Column<string>(type: "text", nullable: false),
-                    DescriptionEn = table.Column<string>(type: "text", nullable: false),
-                    ContentUz = table.Column<string>(type: "text", nullable: false),
-                    ContentRu = table.Column<string>(type: "text", nullable: false),
-                    ContentEn = table.Column<string>(type: "text", nullable: false),
+                    TitleUz = table.Column<string>(type: "text", nullable: true),
+                    TitleEn = table.Column<string>(type: "text", nullable: true),
+                    TitleRu = table.Column<string>(type: "text", nullable: true),
+                    TitleKr = table.Column<string>(type: "text", nullable: true),
+                    DescriptionUz = table.Column<string>(type: "text", nullable: true),
+                    DescriptionRu = table.Column<string>(type: "text", nullable: true),
+                    DescriptionEn = table.Column<string>(type: "text", nullable: true),
+                    DescriptionKr = table.Column<string>(type: "text", nullable: true),
+                    ContentUz = table.Column<string>(type: "text", nullable: true),
+                    ContentRu = table.Column<string>(type: "text", nullable: true),
+                    ContentEn = table.Column<string>(type: "text", nullable: true),
+                    ContentKr = table.Column<string>(type: "text", nullable: true),
                     MainImagePath = table.Column<string>(type: "text", nullable: false),
                     Likes = table.Column<int>(type: "integer", nullable: false),
                     Views = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -78,7 +84,7 @@ namespace NewSamDU.Infrastructure.Migrations
                     ContentEn = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -97,7 +103,7 @@ namespace NewSamDU.Infrastructure.Migrations
                     Role = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -113,12 +119,13 @@ namespace NewSamDU.Infrastructure.Migrations
                     NameUz = table.Column<string>(type: "text", nullable: false),
                     NameRu = table.Column<string>(type: "text", nullable: false),
                     NameEn = table.Column<string>(type: "text", nullable: false),
+                    NameKr = table.Column<string>(type: "text", nullable: false),
                     Priority = table.Column<int>(type: "integer", nullable: false),
                     ParentId = table.Column<int>(type: "integer", nullable: true),
                     RelatedPageId = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -142,17 +149,19 @@ namespace NewSamDU.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    TitleUz = table.Column<string>(type: "text", nullable: false),
-                    TitleEn = table.Column<string>(type: "text", nullable: false),
-                    TitleRu = table.Column<string>(type: "text", nullable: false),
-                    DescriptionUz = table.Column<string>(type: "text", nullable: false),
-                    DescriptionRu = table.Column<string>(type: "text", nullable: false),
-                    DescriptionEn = table.Column<string>(type: "text", nullable: false),
+                    TitleUz = table.Column<string>(type: "text", nullable: true),
+                    TitleEn = table.Column<string>(type: "text", nullable: true),
+                    TitleRu = table.Column<string>(type: "text", nullable: true),
+                    TitleKr = table.Column<string>(type: "text", nullable: true),
+                    DescriptionUz = table.Column<string>(type: "text", nullable: true),
+                    DescriptionRu = table.Column<string>(type: "text", nullable: true),
+                    DescriptionEn = table.Column<string>(type: "text", nullable: true),
+                    DescriptionKr = table.Column<string>(type: "text", nullable: true),
                     RelatedPageId = table.Column<int>(type: "integer", nullable: true),
                     MainImagePath = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -176,7 +185,7 @@ namespace NewSamDU.Infrastructure.Migrations
                     UserId = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {

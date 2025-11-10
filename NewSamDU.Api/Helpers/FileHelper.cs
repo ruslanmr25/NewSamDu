@@ -29,7 +29,7 @@ public class FileHelper
                 .Select(path => new
                 {
                     Name = Path.GetFileName(path),
-                    Size = new FileInfo(path).Length, 
+                    Size = new FileInfo(path).Length,
                 })
                 .ToList();
             return Directory

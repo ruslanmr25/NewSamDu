@@ -31,29 +31,30 @@ namespace NewSamDU.Infrastructure.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ContentEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContentKr")
                         .HasColumnType("text");
 
                     b.Property<string>("ContentRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("ContentUz")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("DescriptionEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("DescriptionKr")
                         .HasColumnType("text");
 
                     b.Property<string>("DescriptionRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("DescriptionUz")
@@ -65,15 +66,15 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("TitleEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TitleKr")
                         .HasColumnType("text");
 
                     b.Property<string>("TitleRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TitleUz")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -95,10 +96,14 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("NameEn")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameKr")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -140,33 +145,33 @@ namespace NewSamDU.Infrastructure.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ContentEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContentKr")
                         .HasColumnType("text");
 
                     b.Property<string>("ContentRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("ContentUz")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("DescriptionEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("DescriptionKr")
                         .HasColumnType("text");
 
                     b.Property<string>("DescriptionRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("DescriptionUz")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Likes")
@@ -177,15 +182,15 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("TitleEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TitleKr")
                         .HasColumnType("text");
 
                     b.Property<string>("TitleRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TitleUz")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -222,7 +227,7 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("TitleEn")
@@ -260,7 +265,7 @@ namespace NewSamDU.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime>("Expires")
@@ -294,19 +299,19 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("DescriptionEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("DescriptionKr")
                         .HasColumnType("text");
 
                     b.Property<string>("DescriptionRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("DescriptionUz")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("MainImagePath")
@@ -317,15 +322,15 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("TitleEn")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TitleKr")
                         .HasColumnType("text");
 
                     b.Property<string>("TitleRu")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TitleUz")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -349,7 +354,7 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("FullName")

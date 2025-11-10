@@ -54,6 +54,114 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251105_115001474_9 -ma'ruza informatika asoslari.ppt'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251110_092708776_Uzbekistan-Emoji.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NewSamDU.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NewSamDU.Api</BasePath>
+      <RelativePath>uploads/20251110_092708776_Uzbekistan-Emoji.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2h6eesw5ck</Fingerprint>
+      <Integrity>RhYAH1pLkpUHe8Hrxcm5V05u2IIfG6i+qu7bJ9oGDHc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251110_092708776_Uzbekistan-Emoji.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251110_092733778_Uzbekistan-Emoji.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NewSamDU.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NewSamDU.Api</BasePath>
+      <RelativePath>uploads/20251110_092733778_Uzbekistan-Emoji.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2h6eesw5ck</Fingerprint>
+      <Integrity>RhYAH1pLkpUHe8Hrxcm5V05u2IIfG6i+qu7bJ9oGDHc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251110_092733778_Uzbekistan-Emoji.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251110_093905367_ChatGPT Image Nov 4, 2025, 02_36_33 PM.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NewSamDU.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NewSamDU.Api</BasePath>
+      <RelativePath>uploads/20251110_093905367_ChatGPT Image Nov 4, 2025, 02_36_33 PM.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cd5867edcd</Fingerprint>
+      <Integrity>0NA5AxUoqrKLU6B+qHDWe99IJ5SCnk8x3kqo3JkC9wY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\20251110_093905367_ChatGPT Image Nov 4, 2025, 02_36_33 PM.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\jamshid\20251110_112047214_Uzbekistan-Emoji.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NewSamDU.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NewSamDU.Api</BasePath>
+      <RelativePath>uploads/jamshid/20251110_112047214_Uzbekistan-Emoji.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2h6eesw5ck</Fingerprint>
+      <Integrity>RhYAH1pLkpUHe8Hrxcm5V05u2IIfG6i+qu7bJ9oGDHc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\jamshid\20251110_112047214_Uzbekistan-Emoji.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\jamshid\20251110_112208442_ChatGPT Image Nov 8, 2025, 10_04_38 AM.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NewSamDU.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NewSamDU.Api</BasePath>
+      <RelativePath>uploads/jamshid/20251110_112208442_ChatGPT Image Nov 8, 2025, 10_04_38 AM.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>zti5f96pm7</Fingerprint>
+      <Integrity>aT5rkURJl3/x87Io5v2XiYlPosCdX4bPw1S2wzRJGEw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\jamshid\20251110_112208442_ChatGPT Image Nov 8, 2025, 10_04_38 AM.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\jamshid\20251110_112241237_ChatGPT Image Nov 4, 2025, 02_36_33 PM.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NewSamDU.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NewSamDU.Api</BasePath>
+      <RelativePath>uploads/jamshid/20251110_112241237_ChatGPT Image Nov 4, 2025, 02_36_33 PM.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cd5867edcd</Fingerprint>
+      <Integrity>0NA5AxUoqrKLU6B+qHDWe99IJ5SCnk8x3kqo3JkC9wY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\jamshid\20251110_112241237_ChatGPT Image Nov 4, 2025, 02_36_33 PM.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\jamshid\New Microsoft Word Document.docx'))">
       <SourceType>Package</SourceType>
       <SourceId>NewSamDU.Api</SourceId>

@@ -6,6 +6,8 @@ public class Menu : BaseEntity
     public string NameRu { get; set; } = string.Empty;
 
     public string NameEn { get; set; } = string.Empty;
+
+    public string NameKr { get; set; } = string.Empty;
     public int Priority { get; set; } = 1;
 
     public Menu? Parent { get; set; }

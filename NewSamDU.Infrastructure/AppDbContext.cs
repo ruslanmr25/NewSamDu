@@ -81,4 +81,29 @@ public class AppDbContext : DbContext
         base.OnModelCreating(modelBuilder);
         // Qo‘shimcha konfiguratsiyalar (optional)
     }
+
+#warning Har bir entityga owner qo'sh ya'ni u kim tomonidan yaratilgan
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        var entries = ChangeTracker
+            .Entries()
+            .Where(e =>
+                e.Entity is BaseEntity
+                && (e.State == EntityState.Added || e.State == EntityState.Modified)
+            );
+
+        foreach (var entry in entries)
+        {
+            var entity = (BaseEntity)entry.Entity;
+
+            entity.UpdatedAt = DateTime.UtcNow.AddHours(5);
+            if (entry.State == EntityState.Added)
+            {
+                entity.CreatedAt = DateTime.UtcNow.AddHours(5);
+            }
+        }
+
+        return base.SaveChangesAsync(cancellationToken);
+    }
 }

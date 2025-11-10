@@ -18,6 +18,11 @@ public static class InfrastructureServices
         });
 
         services.AddScoped<AuthRepository>();
+
+        services.AddScoped<NewsRepository>();
+
+        services.AddScoped<SlideRepository>();
+
         return services;
     }
 }

@@ -97,6 +97,15 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
+var supportedCultures = new[] { "uz", "en", "ru", "kr" };
+
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture("uz")
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
+
 app.UseAuthentication();
 
 app.UseAuthorization();

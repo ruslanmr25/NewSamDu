@@ -1,6 +1,7 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using NewSamDU.Application.Abstractions.IServices;
+using NewSamDU.Application.AutoMappers;
 using NewSamDU.Application.Services;
 
 namespace NewSamDU.Application;
@@ -12,6 +13,11 @@ public static class ApplicaitonServices
         services.AddScoped<IPasswordHasher, PasswordHasher>();
 
         services.AddScoped<TokenService>();
+
+        services.AddAutoMapper(typeof(Mapper).Assembly);
+
+        
+
         return services;
     }
 }

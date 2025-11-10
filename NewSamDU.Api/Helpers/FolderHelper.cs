@@ -23,11 +23,7 @@ public class FolderHelper
 
     public List<string> GetFolders(string folder = "/")
     {
-        if (folder == "/")
-        {
-            return Directory.EnumerateDirectories(wwwRootPath).Select(Path.GetFileName).ToList()!;
-        }
-        string path = ResolvePathOrThrow(folder);
+        string path = ResolvePathOrThrow(CleanName(folder));
 
         return Directory.EnumerateDirectories(path).Select(Path.GetFileName).ToList()!;
     }

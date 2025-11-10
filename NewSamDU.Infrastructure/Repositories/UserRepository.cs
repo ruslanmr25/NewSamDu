@@ -2,7 +2,4 @@ using System;
 
 namespace NewSamDU.Infrastructure.Repositories;
 
-public class UserRepository
-{
-
-}
+public class UserRepository { }

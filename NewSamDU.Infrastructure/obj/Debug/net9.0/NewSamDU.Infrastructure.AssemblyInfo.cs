@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewSamDU.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4950507de16cf2d8f95bf39875b985a9d4cff7f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+286cb072bf73bb36e4bf9a4e1fa9de0ba3fcaa8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewSamDU.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewSamDU.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

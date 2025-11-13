@@ -1,0 +1,71 @@
+## .NET build artifacts
+bin/
+obj/
+
+Properties/
+
+.vscode/
+.history/
+
+## Visual Studio
+.vs/
+.vscode/
+*.vspscc
+*.vssscc
+
+
+
+## Build results
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+## Publish outputs
+/wwwroot/dist/
+/wwwroot/build/
+/publish/
+/out/
+
+## Logs
+*.log
+logs/
+log/
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+.nuget/
+packages/
+*.dll
+*.pdb
+
+## Cache
+*.cache
+*.temp
+*.tmp
+
+## Environment
+.env
+.env.*
+
+## Rider / JetBrains
+.idea/
+*.iml
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Node.js (Blazor WebAssembly uchun kerak bo‘lishi mumkin)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+
+## Generated static assets
+wwwroot/

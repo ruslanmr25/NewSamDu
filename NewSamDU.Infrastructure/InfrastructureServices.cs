@@ -22,7 +22,9 @@ public static class InfrastructureServices
         services.AddScoped<NewsRepository>();
 
         services.AddScoped<SlideRepository>();
+        services.AddScoped<AnnouncementRepositoy>();
 
+        services.AddScoped<PageRepository>();
         return services;
     }
 }

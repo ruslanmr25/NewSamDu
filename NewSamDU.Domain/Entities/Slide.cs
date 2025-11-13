@@ -16,6 +16,8 @@ public class Slide : BaseEntity
     public string? DescriptionEn { get; set; } = string.Empty;
     public string? DescriptionKr { get; set; } = string.Empty;
 
+    public bool IsActive { get; set; } = false;
+
     public Page? RelatedPage { get; set; }
 
     public int? RelatedPageId { get; set; }

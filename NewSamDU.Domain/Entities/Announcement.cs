@@ -11,6 +11,8 @@ public class Announcement : BaseEntity
 
     public string? TitleKr { get; set; } = string.Empty;
 
+    public bool IsActive { get; set; } = true;
+
     public string DescriptionUz { get; set; } = string.Empty;
     public string? DescriptionRu { get; set; } = string.Empty;
     public string? DescriptionEn { get; set; } = string.Empty;
@@ -24,4 +26,8 @@ public class Announcement : BaseEntity
     public string? ContentKr { get; set; } = string.Empty;
 
     public string MainImagePath { get; set; } = string.Empty;
+
+    public int? UserId { get; set; }
+
+    public User? User { get; set; }
 }

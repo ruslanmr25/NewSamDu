@@ -1,9 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace NewSamDU.Application.DTOs.NewsDTOs;
+namespace NewSamDU.Application.DTOs.AnnouncementDTO;
 
-public class UpdateNewsDTO
+public class UpdateAnnouncementDTO
 {
     // [Required(ErrorMessage = "Title (Uz) kiritilishi shart.")]
     [StringLength(200, ErrorMessage = "Title (Uz) 200 ta belgidan oshmasligi kerak.")]
@@ -20,6 +20,8 @@ public class UpdateNewsDTO
     // [Required(ErrorMessage = "Title (Kr) kiritilishi shart.")]
     [StringLength(200, ErrorMessage = "Title (Kr) 200 ta belgidan oshmasligi kerak.")]
     public string? TitleKr { get; set; }
+
+    public bool IsActive { get; set; }
 
     // [Required(ErrorMessage = "Description (Uz) kiritilishi shart.")]
     [StringLength(2000, ErrorMessage = "Description (Uz) 2000 ta belgidan oshmasligi kerak.")]

@@ -42,4 +42,7 @@ public class UpdateSlideDTO
     [Required(ErrorMessage = "Asosiy rasm yo‘li (MainImagePath) kiritilishi shart.")]
     [StringLength(300, ErrorMessage = "Rasm yo‘li 300 ta belgidan oshmasligi kerak.")]
     public string MainImagePath { get; set; } = string.Empty;
+
+    [Required(ErrorMessage ="Holatini kirgizish zarur ")]
+    public bool IsActive { get; set; }
 }

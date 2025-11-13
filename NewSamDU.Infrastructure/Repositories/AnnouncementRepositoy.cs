@@ -1,17 +1,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
-using NewSamDU.Application.DTOs.NewsDTOs;
+using NewSamDU.Application.DTOs.AnnouncementDTO;
 using NewSamDU.Application.Results;
 using NewSamDU.Domain.Entities;
 
 namespace NewSamDU.Infrastructure.Repositories;
 
-public class NewsRepository : BaseRepository<News>
+public class AnnouncementRepositoy : BaseRepository<Announcement>
 {
-    public NewsRepository(AppDbContext context)
+    public AnnouncementRepositoy(AppDbContext context)
         : base(context) { }
 
-    public async Task<PaginatedResult<NewsDTO>> GetAllAsync(
+    public async Task<PaginatedResult<AnnouncementDTO>> GetAllAsync(
         string lang,
         int page = 1,
         int pageSize = 50
@@ -22,7 +22,7 @@ public class NewsRepository : BaseRepository<News>
         var items = await query
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
-            .Select(n => new NewsDTO
+            .Select(n => new AnnouncementDTO
             {
                 Id = n.Id,
 
@@ -46,17 +46,20 @@ public class NewsRepository : BaseRepository<News>
             })
             .ToListAsync();
 
-        return new PaginatedResult<NewsDTO>(items, total, pageSize, page);
+        return new PaginatedResult<AnnouncementDTO>(items, total, pageSize, page);
     }
 
-    public override async Task<PaginatedResult<News>> GetAllAsync(int page = 1, int pageSize = 50)
+    public override async Task<PaginatedResult<Announcement>> GetAllAsync(
+        int page = 1,
+        int pageSize = 50
+    )
     {
         var query = BuildBaseQuery();
         var total = await set.CountAsync();
         var items = await query
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
-            .Select(n => new News
+            .Select(n => new Announcement
             {
                 Id = n.Id,
                 TitleUz = n.TitleUz,
@@ -71,24 +74,22 @@ public class NewsRepository : BaseRepository<News>
                 DescriptionKr = n.DescriptionKr,
 
                 MainImagePath = n.MainImagePath,
-                Likes = n.Likes,
-                Views = n.Views,
 
                 CreatedAt = n.CreatedAt,
                 UpdatedAt = n.UpdatedAt,
             })
             .ToListAsync();
 
-        return new PaginatedResult<News>(items, total, pageSize, page);
+        return new PaginatedResult<Announcement>(items, total, pageSize, page);
     }
 
-    public async Task<NewsDTO?> GetAsync(int id, string lang)
+    public async Task<AnnouncementDTO?> GetAsync(int id, string lang)
     {
-        var result = await set.Select(n => new NewsDTO
-        {
-            Id = n.Id,
+        var result = await set.Select(n => new AnnouncementDTO
+            {
+                Id = n.Id,
 
-            Title =
+                Title =
                     (
                         lang == "en" ? n.TitleEn
                         : lang == "ru" ? n.TitleRu
@@ -96,7 +97,7 @@ public class NewsRepository : BaseRepository<News>
                         : n.TitleUz
                     ) ?? n.TitleUz!,
 
-            Description =
+                Description =
                     (
                         lang == "en" ? n.DescriptionEn
                         : lang == "ru" ? n.DescriptionRu
@@ -104,23 +105,19 @@ public class NewsRepository : BaseRepository<News>
                         : n.DescriptionUz
                     ) ?? n.ContentUz!,
 
-            Content =
+                Content =
                     (
                         lang == "en" ? n.ContentEn
                         : lang == "ru" ? n.ContentRu
                         : lang == "kr" ? n.ContentKr
                         : n.ContentEn
                     ) ?? n.ContentUz!,
-            CreatedAt = n.CreatedAt,
-            UpdatedAt = n.UpdatedAt,
-        })
+                CreatedAt = n.CreatedAt,
+                UpdatedAt = n.UpdatedAt,
+            })
             .Where(n => n.Id == id)
             .FirstOrDefaultAsync();
 
         return result;
     }
-
-
-
-
 }

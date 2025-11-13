@@ -13,34 +13,6 @@ namespace NewSamDU.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Announcements",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    TitleUz = table.Column<string>(type: "text", nullable: true),
-                    TitleEn = table.Column<string>(type: "text", nullable: true),
-                    TitleRu = table.Column<string>(type: "text", nullable: true),
-                    TitleKr = table.Column<string>(type: "text", nullable: true),
-                    DescriptionUz = table.Column<string>(type: "text", nullable: false),
-                    DescriptionRu = table.Column<string>(type: "text", nullable: true),
-                    DescriptionEn = table.Column<string>(type: "text", nullable: true),
-                    DescriptionKr = table.Column<string>(type: "text", nullable: true),
-                    ContentUz = table.Column<string>(type: "text", nullable: true),
-                    ContentRu = table.Column<string>(type: "text", nullable: true),
-                    ContentEn = table.Column<string>(type: "text", nullable: true),
-                    ContentKr = table.Column<string>(type: "text", nullable: true),
-                    MainImagePath = table.Column<string>(type: "text", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Announcements", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "News",
                 columns: table => new
                 {
@@ -157,6 +129,7 @@ namespace NewSamDU.Infrastructure.Migrations
                     DescriptionRu = table.Column<string>(type: "text", nullable: true),
                     DescriptionEn = table.Column<string>(type: "text", nullable: true),
                     DescriptionKr = table.Column<string>(type: "text", nullable: true),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     RelatedPageId = table.Column<int>(type: "integer", nullable: true),
                     MainImagePath = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -170,6 +143,41 @@ namespace NewSamDU.Infrastructure.Migrations
                         name: "FK_Slides_Pages_RelatedPageId",
                         column: x => x.RelatedPageId,
                         principalTable: "Pages",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Announcements",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    TitleUz = table.Column<string>(type: "text", nullable: true),
+                    TitleEn = table.Column<string>(type: "text", nullable: true),
+                    TitleRu = table.Column<string>(type: "text", nullable: true),
+                    TitleKr = table.Column<string>(type: "text", nullable: true),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false),
+                    DescriptionUz = table.Column<string>(type: "text", nullable: false),
+                    DescriptionRu = table.Column<string>(type: "text", nullable: true),
+                    DescriptionEn = table.Column<string>(type: "text", nullable: true),
+                    DescriptionKr = table.Column<string>(type: "text", nullable: true),
+                    ContentUz = table.Column<string>(type: "text", nullable: true),
+                    ContentRu = table.Column<string>(type: "text", nullable: true),
+                    ContentEn = table.Column<string>(type: "text", nullable: true),
+                    ContentKr = table.Column<string>(type: "text", nullable: true),
+                    MainImagePath = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Announcements", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Announcements_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
                         principalColumn: "Id");
                 });
 
@@ -197,6 +205,11 @@ namespace NewSamDU.Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Announcements_UserId",
+                table: "Announcements",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Menus_ParentId",

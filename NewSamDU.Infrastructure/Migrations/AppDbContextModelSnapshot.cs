@@ -61,6 +61,9 @@ namespace NewSamDU.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("MainImagePath")
                         .IsRequired()
                         .HasColumnType("text");
@@ -80,7 +83,12 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Announcements");
                 });
@@ -314,6 +322,9 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<string>("DescriptionUz")
                         .HasColumnType("text");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("MainImagePath")
                         .IsRequired()
                         .HasColumnType("text");
@@ -378,6 +389,15 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("NewSamDU.Domain.Entities.Announcement", b =>
+                {
+                    b.HasOne("NewSamDU.Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("NewSamDU.Domain.Entities.Menu", b =>

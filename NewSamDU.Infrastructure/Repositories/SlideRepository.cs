@@ -20,6 +20,7 @@ public class SlideRepository : BaseRepository<Slide>
         var query = BuildBaseQuery();
         var total = await set.CountAsync();
         var items = await query
+            .Where(s => s.IsActive)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .Select(n => new SlideDTO
@@ -48,6 +49,8 @@ public class SlideRepository : BaseRepository<Slide>
 
                 CreatedAt = n.CreatedAt,
                 UpdatedAt = n.UpdatedAt,
+
+                IsActive = n.IsActive,
             })
             .ToListAsync();
 

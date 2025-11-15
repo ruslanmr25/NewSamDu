@@ -51,9 +51,11 @@ namespace NewSamDU.Infrastructure.Migrations
                     TitleUz = table.Column<string>(type: "text", nullable: false),
                     TitleEn = table.Column<string>(type: "text", nullable: false),
                     TitleRu = table.Column<string>(type: "text", nullable: false),
+                    TitleKr = table.Column<string>(type: "text", nullable: false),
                     ContentUz = table.Column<string>(type: "text", nullable: false),
                     ContentRu = table.Column<string>(type: "text", nullable: false),
                     ContentEn = table.Column<string>(type: "text", nullable: false),
+                    ContentKr = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
@@ -94,7 +96,8 @@ namespace NewSamDU.Infrastructure.Migrations
                     NameKr = table.Column<string>(type: "text", nullable: false),
                     Priority = table.Column<int>(type: "integer", nullable: false),
                     ParentId = table.Column<int>(type: "integer", nullable: true),
-                    RelatedPageId = table.Column<int>(type: "integer", nullable: false),
+                    RelatedPageId = table.Column<int>(type: "integer", nullable: true),
+                    ExternalLink = table.Column<string>(type: "text", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
@@ -111,8 +114,7 @@ namespace NewSamDU.Infrastructure.Migrations
                         name: "FK_Menus_Pages_RelatedPageId",
                         column: x => x.RelatedPageId,
                         principalTable: "Pages",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

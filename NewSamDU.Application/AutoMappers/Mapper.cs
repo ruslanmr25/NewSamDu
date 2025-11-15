@@ -1,6 +1,7 @@
 using System;
 using AutoMapper;
 using NewSamDU.Application.DTOs.AnnouncementDTO;
+using NewSamDU.Application.DTOs.MenuDTO;
 using NewSamDU.Application.DTOs.NewsDTOs;
 using NewSamDU.Application.DTOs.PagesDTO;
 using NewSamDU.Application.DTOs.SlideDTO;
@@ -30,6 +31,11 @@ public class Mapper : Profile
         CreateMap<CreatePageDTO, Page>();
 
         CreateMap<UpdatePageDTO, Page>()
+            .ForAllMembers(opt => opt.Condition((src, dist, srcMember) => srcMember != null));
+
+        CreateMap<CreateMenuDTO, Menu>();
+
+        CreateMap<UpdateMenuDTO, Menu>()
             .ForAllMembers(opt => opt.Condition((src, dist, srcMember) => srcMember != null));
     }
 }

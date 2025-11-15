@@ -1,6 +1,3 @@
-using System;
-using Microsoft.EntityFrameworkCore;
-using NewSamDU.Application.DTOs.AnnouncementDTO;
 using NewSamDU.Application.DTOs.PagesDTO;
 using NewSamDU.Domain.Entities;
 
@@ -13,29 +10,33 @@ public class PageRepository : BaseRepository<Page>
 
     public async Task<PageDTO?> GetAsync(int id, string lang)
     {
-        var result = await set.Select(n => new PageDTO
-            {
-                Id = n.Id,
-                Title =
-                    (
-                        lang == "en" ? n.TitleEn
-                        : lang == "ru" ? n.TitleRu
-                        : lang == "kr" ? n.TitleKr
-                        : n.TitleUz
-                    ) ?? n.TitleUz!,
+        var n = await base.GetAsync(id);
 
-                Content =
-                    (
-                        lang == "en" ? n.ContentEn
-                        : lang == "ru" ? n.ContentRu
-                        : lang == "kr" ? n.ContentKr
-                        : n.ContentEn
-                    ) ?? n.ContentUz!,
-                CreatedAt = n.CreatedAt,
-                UpdatedAt = n.UpdatedAt,
-            })
-            .Where(n => n.Id == id)
-            .FirstOrDefaultAsync();
+        if (n is null)
+        {
+            return null;
+        }
+        var result = new PageDTO
+        {
+            Id = n.Id,
+            Title =
+                (
+                    lang == "en" ? n.TitleEn
+                    : lang == "ru" ? n.TitleRu
+                    : lang == "kr" ? n.TitleKr
+                    : n.TitleUz
+                ) ?? n.TitleUz!,
+
+            Content =
+                (
+                    lang == "en" ? n.ContentEn
+                    : lang == "ru" ? n.ContentRu
+                    : lang == "kr" ? n.ContentKr
+                    : n.ContentEn
+                ) ?? n.ContentUz!,
+            CreatedAt = n.CreatedAt,
+            UpdatedAt = n.UpdatedAt,
+        };
 
         return result;
     }

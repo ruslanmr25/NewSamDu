@@ -107,6 +107,9 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("ExternalLink")
+                        .HasColumnType("text");
+
                     b.Property<string>("NameEn")
                         .IsRequired()
                         .HasColumnType("text");
@@ -129,7 +132,7 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<int>("Priority")
                         .HasColumnType("integer");
 
-                    b.Property<int>("RelatedPageId")
+                    b.Property<int?>("RelatedPageId")
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -224,6 +227,10 @@ namespace NewSamDU.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("ContentKr")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("ContentRu")
                         .IsRequired()
                         .HasColumnType("text");
@@ -239,6 +246,10 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("TitleEn")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TitleKr")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -408,9 +419,7 @@ namespace NewSamDU.Infrastructure.Migrations
 
                     b.HasOne("NewSamDU.Domain.Entities.Page", "RelatedPage")
                         .WithMany()
-                        .HasForeignKey("RelatedPageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RelatedPageId");
 
                     b.Navigation("Parent");
 

@@ -1,5 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using NewSamDU.Application.Attributes;
+using NewSamDU.Domain.Entities;
 
 namespace NewSamDU.Application.DTOs.SlideDTO;
 
@@ -37,12 +39,13 @@ public class CreateSlideDTO
     [StringLength(1000, ErrorMessage = "Description (Kr) 1000 ta belgidan oshmasligi kerak.")]
     public string? DescriptionKr { get; set; } = string.Empty;
 
+    [Range(1, int.MaxValue)]
+    [Exists<Page>]
     public int? RelatedPageId { get; set; }
 
     [Required(ErrorMessage = "Asosiy rasm yo‘li (MainImagePath) kiritilishi shart.")]
     [StringLength(300, ErrorMessage = "Rasm yo‘li 300 ta belgidan oshmasligi kerak.")]
     public string MainImagePath { get; set; } = string.Empty;
 
-    [Required(ErrorMessage = "Holatini kirgizish zarur ")]
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
 }

@@ -85,39 +85,44 @@ public class AnnouncementRepositoy : BaseRepository<Announcement>
 
     public async Task<AnnouncementDTO?> GetAsync(int id, string lang)
     {
-        var result = await set.Select(n => new AnnouncementDTO
-            {
-                Id = n.Id,
+        var n = await GetAsync(id);
 
-                Title =
-                    (
-                        lang == "en" ? n.TitleEn
-                        : lang == "ru" ? n.TitleRu
-                        : lang == "kr" ? n.TitleKr
-                        : n.TitleUz
-                    ) ?? n.TitleUz!,
+        if (n is null)
+        {
+            return null;
+        }
 
-                Description =
-                    (
-                        lang == "en" ? n.DescriptionEn
-                        : lang == "ru" ? n.DescriptionRu
-                        : lang == "kr" ? n.DescriptionKr
-                        : n.DescriptionUz
-                    ) ?? n.ContentUz!,
+        AnnouncementDTO dto = new()
+        {
+            Id = n.Id,
 
-                Content =
-                    (
-                        lang == "en" ? n.ContentEn
-                        : lang == "ru" ? n.ContentRu
-                        : lang == "kr" ? n.ContentKr
-                        : n.ContentEn
-                    ) ?? n.ContentUz!,
-                CreatedAt = n.CreatedAt,
-                UpdatedAt = n.UpdatedAt,
-            })
-            .Where(n => n.Id == id)
-            .FirstOrDefaultAsync();
+            Title =
+                (
+                    lang == "en" ? n.TitleEn
+                    : lang == "ru" ? n.TitleRu
+                    : lang == "kr" ? n.TitleKr
+                    : n.TitleUz
+                ) ?? n.TitleUz!,
 
-        return result;
+            Description =
+                (
+                    lang == "en" ? n.DescriptionEn
+                    : lang == "ru" ? n.DescriptionRu
+                    : lang == "kr" ? n.DescriptionKr
+                    : n.DescriptionUz
+                ) ?? n.ContentUz!,
+
+            Content =
+                (
+                    lang == "en" ? n.ContentEn
+                    : lang == "ru" ? n.ContentRu
+                    : lang == "kr" ? n.ContentKr
+                    : n.ContentEn
+                ) ?? n.ContentUz!,
+            CreatedAt = n.CreatedAt,
+            UpdatedAt = n.UpdatedAt,
+        };
+
+        return dto;
     }
 }

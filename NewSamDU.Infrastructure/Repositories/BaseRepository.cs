@@ -69,7 +69,7 @@ public class BaseRepository<T>
 
     public async Task<T?> GetAsync(int Id)
     {
-        var result = await set.FindAsync(Id);
+        var result = await set.Where(e => e.DeletedAt == null && e.Id == Id).FirstOrDefaultAsync();
 
         return result;
     }

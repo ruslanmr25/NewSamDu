@@ -84,43 +84,43 @@ public class NewsRepository : BaseRepository<News>
 
     public async Task<NewsDTO?> GetAsync(int id, string lang)
     {
-        var result = await set.Select(n => new NewsDTO
+        var n = await GetAsync(id);
+
+        if (n is null)
+        {
+            return null;
+        }
+        var result = new NewsDTO
         {
             Id = n.Id,
 
             Title =
-                    (
-                        lang == "en" ? n.TitleEn
-                        : lang == "ru" ? n.TitleRu
-                        : lang == "kr" ? n.TitleKr
-                        : n.TitleUz
-                    ) ?? n.TitleUz!,
+                (
+                    lang == "en" ? n.TitleEn
+                    : lang == "ru" ? n.TitleRu
+                    : lang == "kr" ? n.TitleKr
+                    : n.TitleUz
+                ) ?? n.TitleUz!,
 
             Description =
-                    (
-                        lang == "en" ? n.DescriptionEn
-                        : lang == "ru" ? n.DescriptionRu
-                        : lang == "kr" ? n.DescriptionKr
-                        : n.DescriptionUz
-                    ) ?? n.ContentUz!,
+                (
+                    lang == "en" ? n.DescriptionEn
+                    : lang == "ru" ? n.DescriptionRu
+                    : lang == "kr" ? n.DescriptionKr
+                    : n.DescriptionUz
+                ) ?? n.ContentUz!,
 
             Content =
-                    (
-                        lang == "en" ? n.ContentEn
-                        : lang == "ru" ? n.ContentRu
-                        : lang == "kr" ? n.ContentKr
-                        : n.ContentEn
-                    ) ?? n.ContentUz!,
+                (
+                    lang == "en" ? n.ContentEn
+                    : lang == "ru" ? n.ContentRu
+                    : lang == "kr" ? n.ContentKr
+                    : n.ContentEn
+                ) ?? n.ContentUz!,
             CreatedAt = n.CreatedAt,
             UpdatedAt = n.UpdatedAt,
-        })
-            .Where(n => n.Id == id)
-            .FirstOrDefaultAsync();
+        };
 
         return result;
     }
-
-
-
-
 }

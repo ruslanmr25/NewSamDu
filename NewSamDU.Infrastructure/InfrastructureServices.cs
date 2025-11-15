@@ -1,7 +1,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using NewSamDU.Application.Abstractions.IServices;
 using NewSamDU.Infrastructure.Repositories;
+using NewSamDU.Infrastructure.Services;
 
 namespace NewSamDU.Infrastructure;
 
@@ -25,6 +27,10 @@ public static class InfrastructureServices
         services.AddScoped<AnnouncementRepositoy>();
 
         services.AddScoped<PageRepository>();
+
+        services.AddScoped<MenuRepository>();
+
+        services.AddScoped<IValidationService, ValidationService>();
         return services;
     }
 }

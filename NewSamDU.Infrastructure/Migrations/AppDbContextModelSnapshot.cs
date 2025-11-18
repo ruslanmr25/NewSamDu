@@ -68,6 +68,9 @@ namespace NewSamDU.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("OwnerId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("TitleEn")
                         .HasColumnType("text");
 
@@ -83,14 +86,57 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("UserId")
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
+
+                    b.ToTable("Announcements");
+                });
+
+            modelBuilder.Entity("NewSamDU.Domain.Entities.ExternalProject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("OwnerId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ProjectPath")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StaticFilesPath")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("OwnerId");
 
-                    b.ToTable("Announcements");
+                    b.ToTable("ExternalProjects");
                 });
 
             modelBuilder.Entity("NewSamDU.Domain.Entities.Menu", b =>
@@ -126,6 +172,9 @@ namespace NewSamDU.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("OwnerId")
+                        .HasColumnType("integer");
+
                     b.Property<int?>("ParentId")
                         .HasColumnType("integer");
 
@@ -139,6 +188,8 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
 
                     b.HasIndex("ParentId");
 
@@ -192,6 +243,9 @@ namespace NewSamDU.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("OwnerId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("TitleEn")
                         .HasColumnType("text");
 
@@ -211,6 +265,8 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("News");
                 });
@@ -245,6 +301,9 @@ namespace NewSamDU.Infrastructure.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("OwnerId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("TitleEn")
                         .IsRequired()
                         .HasColumnType("text");
@@ -265,6 +324,8 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("Pages");
                 });
@@ -340,6 +401,9 @@ namespace NewSamDU.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("OwnerId")
+                        .HasColumnType("integer");
+
                     b.Property<int?>("RelatedPageId")
                         .HasColumnType("integer");
 
@@ -359,6 +423,8 @@ namespace NewSamDU.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
 
                     b.HasIndex("RelatedPageId");
 
@@ -404,26 +470,69 @@ namespace NewSamDU.Infrastructure.Migrations
 
             modelBuilder.Entity("NewSamDU.Domain.Entities.Announcement", b =>
                 {
-                    b.HasOne("NewSamDU.Domain.Entities.User", "User")
+                    b.HasOne("NewSamDU.Domain.Entities.User", "Owner")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("NewSamDU.Domain.Entities.ExternalProject", b =>
+                {
+                    b.HasOne("NewSamDU.Domain.Entities.User", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("NewSamDU.Domain.Entities.Menu", b =>
                 {
-                    b.HasOne("NewSamDU.Domain.Entities.Menu", "Parent")
+                    b.HasOne("NewSamDU.Domain.Entities.User", "Owner")
                         .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NewSamDU.Domain.Entities.Menu", "Parent")
+                        .WithMany("Children")
                         .HasForeignKey("ParentId");
 
                     b.HasOne("NewSamDU.Domain.Entities.Page", "RelatedPage")
                         .WithMany()
                         .HasForeignKey("RelatedPageId");
 
+                    b.Navigation("Owner");
+
                     b.Navigation("Parent");
 
                     b.Navigation("RelatedPage");
+                });
+
+            modelBuilder.Entity("NewSamDU.Domain.Entities.News", b =>
+                {
+                    b.HasOne("NewSamDU.Domain.Entities.User", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("NewSamDU.Domain.Entities.Page", b =>
+                {
+                    b.HasOne("NewSamDU.Domain.Entities.User", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("NewSamDU.Domain.Entities.RefreshToken", b =>
@@ -439,11 +548,24 @@ namespace NewSamDU.Infrastructure.Migrations
 
             modelBuilder.Entity("NewSamDU.Domain.Entities.Slide", b =>
                 {
+                    b.HasOne("NewSamDU.Domain.Entities.User", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("NewSamDU.Domain.Entities.Page", "RelatedPage")
                         .WithMany()
                         .HasForeignKey("RelatedPageId");
 
+                    b.Navigation("Owner");
+
                     b.Navigation("RelatedPage");
+                });
+
+            modelBuilder.Entity("NewSamDU.Domain.Entities.Menu", b =>
+                {
+                    b.Navigation("Children");
                 });
 
             modelBuilder.Entity("NewSamDU.Domain.Entities.User", b =>

@@ -1,5 +1,7 @@
 using System.Globalization;
+using System.Security.Claims;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NewSamDU.Application.DTOs.Queries;
 using NewSamDU.Application.DTOs.SlideDTO;
@@ -25,6 +27,7 @@ namespace SlideamDU.Api.Controllers
         }
 
         [HttpGet("full")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetAllAsync([FromQuery] BaseQuery query)
         {
             var items = await slideRepository.GetAllAsync(query.Page, query.PageSize);
@@ -41,42 +44,47 @@ namespace SlideamDU.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> CreateAsync(CreateSlideDTO dto)
         {
-            var Slide = mapper.Map<Slide>(dto);
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
+            Slide slide = mapper.Map<Slide>(dto);
+            slide.OwnerId = userId;
 
-            var createdSlide = await slideRepository.CreateAsync(Slide);
+            var createdSlide = await slideRepository.CreateAsync(slide);
             return Ok(new Response<Slide>(createdSlide));
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> UpdateAsync(int id, UpdateSlideDTO dto)
         {
-            var Slide = await slideRepository.GetAsync(id);
+            var slide = await slideRepository.GetAsync(id);
 
-            if (Slide is null)
+            if (slide is null)
             {
                 return NotFound();
             }
 
-            mapper.Map(dto, Slide);
+            mapper.Map(dto, slide);
 
-            // await slideRepository.UpdateAsync(Slide);
+            var entity = await slideRepository.UpdateAsync(slide);
 
-            return Ok();
+            return Ok(new Response<Slide>(entity));
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var Slide = await slideRepository.GetAsync(id);
+            var slide = await slideRepository.GetAsync(id);
 
-            if (Slide is null)
+            if (slide is null)
             {
                 return NotFound();
             }
-            await slideRepository.DeleteAsync(Slide);
-            return Ok();
+            await slideRepository.DeleteAsync(slide);
+            return Ok(new Response());
         }
     }
 }

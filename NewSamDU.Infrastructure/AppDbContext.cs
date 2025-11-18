@@ -22,6 +22,8 @@ public class AppDbContext : DbContext
 
     public DbSet<Announcement> Announcements { get; set; }
 
+    public DbSet<ExternalProject> ExternalProjects { get; set; }
+
     public DbSet<News> News { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NewSamDU.Api.Helpers;
 using NewSamDU.Application.DTOs.FileDTO;
@@ -8,6 +9,7 @@ namespace NewSamDU.Api.Controllers;
 
 [Route("api/files")]
 [ApiController]
+[Authorize(Roles = "Admin,Manager")]
 public class FileController : ControllerBase
 {
     protected readonly FileHelper fileHelper;

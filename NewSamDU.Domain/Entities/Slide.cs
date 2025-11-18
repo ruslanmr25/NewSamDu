@@ -23,4 +23,8 @@ public class Slide : BaseEntity
     public int? RelatedPageId { get; set; }
 
     public string MainImagePath { get; set; } = string.Empty;
+
+    public User Owner { get; set; } = default!;
+
+    public int OwnerId { get; set; }
 }

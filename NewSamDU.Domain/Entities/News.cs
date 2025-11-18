@@ -29,4 +29,8 @@ public class News : BaseEntity
     public int Likes { get; set; } = 0;
 
     public int Views { get; set; } = 0;
+
+    public User Owner { get; set; } = default!;
+
+    public int OwnerId { get; set; }
 }

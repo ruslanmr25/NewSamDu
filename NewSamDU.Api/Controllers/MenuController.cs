@@ -1,4 +1,6 @@
+using System.Security.Claims;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NewSamDU.Application.DTOs.MenuDTO;
 using NewSamDU.Application.DTOs.Queries;
@@ -30,16 +32,24 @@ namespace NewSamDU.Api.Controllers
             return Ok(new Response<List<Menu>>(menus));
         }
 
+#warning bu yerda faqat barcha tilni olayapti, translated yo'q
+
         [HttpPost]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> CreateAsync(CreateMenuDTO dto)
         {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
             var menu = mapper.Map<Menu>(dto);
 
+            menu.OwnerId = userId;
+
             var entity = await menuRepository.CreateAsync(menu);
+
             return Ok(new Response<Menu>(entity));
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> UpdateAsync(int id, UpdateMenuDTO dto)
         {
             var menu = await menuRepository.GetAsync(id);
@@ -56,6 +66,7 @@ namespace NewSamDU.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             Menu? menu = await menuRepository.GetAsync(id);

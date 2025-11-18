@@ -3,6 +3,12 @@ obj/
 
 Properties/
 
+
+
+appsettings.json
+
+appsettings.Development.json
+
 .vscode/
 .history/
 

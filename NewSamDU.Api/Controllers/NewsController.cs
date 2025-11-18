@@ -1,5 +1,7 @@
 using System.Globalization;
+using System.Security.Claims;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NewSamDU.Application.AutoMappers;
 using NewSamDU.Application.DTOs.NewsDTOs;
@@ -26,6 +28,7 @@ namespace NewSamDU.Api.Controllers
         }
 
         [HttpGet("full")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetAllAsync([FromQuery] BaseQuery query)
         {
             var items = await newsRepository.GetAllAsync(query.Page, query.PageSize);
@@ -42,6 +45,7 @@ namespace NewSamDU.Api.Controllers
         }
 
         [HttpGet("{id}/full")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetFullById(int id)
         {
             var news = await newsRepository.GetAsync(id);
@@ -57,15 +61,20 @@ namespace NewSamDU.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> CreateAsync(CreateNewsDTO dto)
         {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
             var news = mapper.Map<News>(dto);
+
+            news.OwnerId = userId;
 
             var createdNews = await newsRepository.CreateAsync(news);
             return Ok(new Response<News>(createdNews));
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> UpdateAsync(int id, UpdateNewsDTO dto)
         {
             var news = await newsRepository.GetAsync(id);
@@ -77,12 +86,13 @@ namespace NewSamDU.Api.Controllers
 
             mapper.Map(dto, news);
 
-            await newsRepository.UpdateAsync(news);
+            var entity = await newsRepository.UpdateAsync(news);
 
-            return Ok();
+            return Ok(new Response<News>(entity));
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var news = await newsRepository.GetAsync(id);
@@ -92,7 +102,7 @@ namespace NewSamDU.Api.Controllers
                 return NotFound();
             }
             await newsRepository.DeleteAsync(news);
-            return Ok();
+            return Ok(new Response());
         }
     }
 }

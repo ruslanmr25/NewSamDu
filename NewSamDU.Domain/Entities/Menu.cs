@@ -23,4 +23,8 @@ public class Menu : BaseEntity
     public int? RelatedPageId { get; set; }
 
     public string? ExternalLink { get; set; }
+
+    public User Owner { get; set; } = default!;
+
+    public int OwnerId { get; set; }
 }

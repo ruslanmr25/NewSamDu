@@ -1,5 +1,7 @@
 using System.Globalization;
+using System.Security.Claims;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NewSamDU.Application.DTOs.AnnouncementDTO;
 using NewSamDU.Application.DTOs.Queries;
@@ -25,6 +27,7 @@ namespace NewSamDU.Api.Controllers
         }
 
         [HttpGet("full")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetAllAsync([FromQuery] BaseQuery query)
         {
             var items = await announcementRepository.GetAllAsync(query.Page, query.PageSize);
@@ -41,6 +44,7 @@ namespace NewSamDU.Api.Controllers
         }
 
         [HttpGet("{id}/full")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetFullById(int id)
         {
             var announcement = await announcementRepository.GetAsync(id);
@@ -66,15 +70,21 @@ namespace NewSamDU.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> CreateAsync(CreateAnnouncementDto dto)
         {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
+
             var annoucement = mapper.Map<Announcement>(dto);
+
+            annoucement.OwnerId = userId;
 
             var entity = await announcementRepository.CreateAsync(annoucement);
             return Ok(new Response<Announcement>(entity));
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> UpdateAsync(int id, UpdateAnnouncementDTO dto)
         {
             var announcement = await announcementRepository.GetAsync(id);
@@ -86,12 +96,13 @@ namespace NewSamDU.Api.Controllers
 
             mapper.Map(dto, announcement);
 
-            await announcementRepository.UpdateAsync(announcement);
+            var entity = await announcementRepository.UpdateAsync(announcement);
 
-            return Ok();
+            return Ok(new Response<Announcement>(entity));
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var announcement = await announcementRepository.GetAsync(id);
@@ -101,7 +112,7 @@ namespace NewSamDU.Api.Controllers
                 return NotFound();
             }
             await announcementRepository.DeleteAsync(announcement);
-            return Ok();
+            return Ok(new Response());
         }
     }
 }

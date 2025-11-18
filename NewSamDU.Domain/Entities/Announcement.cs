@@ -27,7 +27,7 @@ public class Announcement : BaseEntity
 
     public string MainImagePath { get; set; } = string.Empty;
 
-    public int? UserId { get; set; }
+    public int OwnerId { get; set; }
 
-    public User? User { get; set; }
+    public User Owner { get; set; } = default!;
 }

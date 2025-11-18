@@ -31,6 +31,8 @@ public static class InfrastructureServices
         services.AddScoped<MenuRepository>();
 
         services.AddScoped<IValidationService, ValidationService>();
+
+        services.AddScoped<ExternalProjectRepository>();
         return services;
     }
 }

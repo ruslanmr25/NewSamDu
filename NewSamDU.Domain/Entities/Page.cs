@@ -16,4 +16,8 @@ public class Page : BaseEntity
     public string ContentEn { get; set; } = string.Empty;
 
     public string ContentKr { get; set; } = string.Empty;
+
+    public User Owner { get; set; } = default!;
+
+    public int OwnerId { get; set; }
 }

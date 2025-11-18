@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NewSamDU.Api.Helpers;
@@ -9,6 +10,7 @@ namespace NewSamDU.Api.Controllers;
 
 [Route("api/folders")]
 [ApiController]
+[Authorize(Roles = "Admin,Manager")]
 public class FolderController : ControllerBase
 {
     protected readonly FolderHelper folderHelper;

@@ -60,7 +60,17 @@ namespace NewSamDU.Api.Controllers
                 return Ok(
                     new Response()
                     {
-                        Data = new { AccessToken = token, RefreshToken = refReshToken.Token },
+                        Data = new
+                        {
+                            AccessToken = token,
+                            RefreshToken = refReshToken.Token,
+                            User = new
+                            {
+                                FullName = user.FullName,
+                                Username = user.Username,
+                                Role = user.Role.ToString(),
+                            },
+                        },
                     }
                 );
             }

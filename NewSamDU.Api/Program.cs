@@ -1,6 +1,8 @@
 using System.Text;
+using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NewSamDU.Api.Helpers;
@@ -93,9 +95,30 @@ builder.Services.RegisterInfrastructureServices(
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
+builder.Services.AddRateLimiter(options =>
+{
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(context =>
+    {
+        var ip = context.Connection.RemoteIpAddress?.ToString() ?? "unkown";
+
+        return RateLimitPartition.GetFixedWindowLimiter(
+            ip,
+            partition => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 50,
+
+                Window = TimeSpan.FromSeconds(10),
+            }
+        );
+    });
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+});
+
 var app = builder.Build();
 
 app.UseStaticFiles();
+
+app.UseRateLimiter();
 
 var supportedCultures = new[] { "uz", "en", "ru", "kr" };
 

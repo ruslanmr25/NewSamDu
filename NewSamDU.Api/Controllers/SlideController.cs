@@ -30,7 +30,7 @@ namespace SlideamDU.Api.Controllers
         [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetAllAsync([FromQuery] BaseQuery query)
         {
-            var items = await slideRepository.GetAllAsync(query.Page, query.PageSize);
+            var items = await slideRepository.GetAllAsync(query);
             return Ok(new Response<PaginatedResult<Slide>>(items));
         }
 

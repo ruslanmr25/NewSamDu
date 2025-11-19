@@ -30,7 +30,7 @@ namespace NewSamDU.Api.Controllers
         [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetAllAsync([FromQuery] BaseQuery query)
         {
-            var items = await announcementRepository.GetAllAsync(query.Page, query.PageSize);
+            var items = await announcementRepository.GetAllAsync(query);
             return Ok(new Response<PaginatedResult<Announcement>>(items));
         }
 

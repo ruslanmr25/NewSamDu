@@ -28,6 +28,14 @@ public class PageController : ControllerBase
         this.mapper = mapper;
     }
 
+    [HttpGet("/unassigned")]
+    public async Task<IActionResult> UnassignedPages()
+    {
+        var pages = await pageRepository.GetUnassignedPages();
+
+        return Ok(new Response<List<Page>>(pages));
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetTranslatedPage(int id)
     {

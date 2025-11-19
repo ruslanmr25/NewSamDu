@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using NewSamDU.Application.DTOs.PagesDTO;
+using NewSamDU.Application.DTOs.Queries;
 using NewSamDU.Domain.Entities;
 
 namespace NewSamDU.Infrastructure.Repositories;
@@ -7,6 +9,25 @@ public class PageRepository : BaseRepository<Page>
 {
     public PageRepository(AppDbContext context)
         : base(context) { }
+
+    public async Task<List<Page>> GetUnassignedPages()
+    {
+        var query = BuildBaseQuery();
+
+        var pages = await query
+            .Where(p => p.Menu == null)
+            .Select(p => new Page
+            {
+                TitleUz = p.TitleUz,
+                TitleEn = p.TitleEn,
+                TitleKr = p.TitleKr,
+
+                TitleRu = p.TitleRu,
+            })
+            .ToListAsync();
+
+        return pages;
+    }
 
     public async Task<PageDTO?> GetAsync(int id, string lang)
     {

@@ -20,4 +20,6 @@ public class Page : BaseEntity
     public User Owner { get; set; } = default!;
 
     public int OwnerId { get; set; }
+
+    public Menu? Menu { get; set; }
 }

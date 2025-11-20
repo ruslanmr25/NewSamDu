@@ -116,6 +116,8 @@ builder.Services.AddRateLimiter(options =>
 
 var app = builder.Build();
 
+app.UseCors("AllowFrontend");
+
 app.UseStaticFiles();
 
 app.UseRateLimiter();
@@ -146,8 +148,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
-app.UseCors("AllowFrontend");
 
 app.MapControllers();
 

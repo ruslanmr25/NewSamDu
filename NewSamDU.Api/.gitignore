@@ -5,9 +5,10 @@ Properties/
 
 
 
-/appsettings.json
+appsettings.json
 
-/appsettings.Development.json
+appsettings.Development.json
+
 
 .vscode/
 .history/

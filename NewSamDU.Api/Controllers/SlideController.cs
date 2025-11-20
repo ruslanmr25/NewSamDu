@@ -44,7 +44,7 @@ namespace SlideamDU.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize("Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> GetSlide(int id)
         {
             var slide = await slideRepository.GetAsync(id);

@@ -43,6 +43,20 @@ namespace SlideamDU.Api.Controllers
             return Ok(new Response<PaginatedResult<SlideDTO>>(items));
         }
 
+        [HttpGet("{id}")]
+        [Authorize("Admin,Manager")]
+        public async Task<IActionResult> GetSlide(int id)
+        {
+            var slide = await slideRepository.GetAsync(id);
+
+            if (slide is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new Response<Slide>(slide));
+        }
+
         [HttpPost]
         [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> CreateAsync(CreateSlideDTO dto)

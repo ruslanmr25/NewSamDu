@@ -28,7 +28,7 @@ public class PageController : ControllerBase
         this.mapper = mapper;
     }
 
-    [HttpGet("/unassigned")]
+    [HttpGet("unassigned")]
     public async Task<IActionResult> UnassignedPages()
     {
         var pages = await pageRepository.GetUnassignedPages();

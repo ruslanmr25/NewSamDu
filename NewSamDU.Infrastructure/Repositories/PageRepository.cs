@@ -18,6 +18,7 @@ public class PageRepository : BaseRepository<Page>
             .Where(p => p.Menu == null)
             .Select(p => new Page
             {
+                Id = p.Id,
                 TitleUz = p.TitleUz,
                 TitleEn = p.TitleEn,
                 TitleKr = p.TitleKr,

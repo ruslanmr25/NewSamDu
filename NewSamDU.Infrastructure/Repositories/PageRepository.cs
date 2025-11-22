@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using NewSamDU.Application.DTOs.PagesDTO;
 using NewSamDU.Application.DTOs.Queries;
+using NewSamDU.Application.Results;
 using NewSamDU.Domain.Entities;
 
 namespace NewSamDU.Infrastructure.Repositories;
@@ -10,12 +11,18 @@ public class PageRepository : BaseRepository<Page>
     public PageRepository(AppDbContext context)
         : base(context) { }
 
-    public async Task<List<Page>> GetUnassignedPages()
+    public virtual async Task<PaginatedResult<Page>> GetAllAsync(PageQuery pageQuery)
     {
         var query = BuildBaseQuery();
 
-        var pages = await query
-            .Where(p => p.Menu == null)
+        if (pageQuery.OnlyUnasignedPages)
+        {
+            query = query.Where(p => p.Menu == null);
+        }
+        var total = await set.CountAsync();
+        var items = await query
+            .Skip((pageQuery.Page - 1) * pageQuery.PageSize)
+            .Take(pageQuery.PageSize)
             .Select(p => new Page
             {
                 Id = p.Id,
@@ -24,10 +31,15 @@ public class PageRepository : BaseRepository<Page>
                 TitleKr = p.TitleKr,
 
                 TitleRu = p.TitleRu,
+
+                OwnerId = p.OwnerId,
+
+                CreatedAt = p.CreatedAt,
+                UpdatedAt = p.UpdatedAt,
             })
             .ToListAsync();
 
-        return pages;
+        return new PaginatedResult<Page>(items, total, pageQuery.PageSize, pageQuery.PageSize);
     }
 
     public async Task<PageDTO?> GetAsync(int id, string lang)

@@ -4,5 +4,5 @@ namespace NewSamDU.Application.DTOs.Queries;
 
 public class PageQuery : BaseQuery
 {
-    public bool OnlyUnasignedPages = false;
+    public bool OnlyUnasignedPages { get; set; } = false;
 }

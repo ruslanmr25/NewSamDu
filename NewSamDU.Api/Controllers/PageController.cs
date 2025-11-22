@@ -8,6 +8,7 @@ using NewSamDU.Application.DTOs.AnnouncementDTO;
 using NewSamDU.Application.DTOs.PagesDTO;
 using NewSamDU.Application.DTOs.Queries;
 using NewSamDU.Application.Responses;
+using NewSamDU.Application.Results;
 using NewSamDU.Domain.Entities;
 using NewSamDU.Domain.Enums;
 using NewSamDU.Infrastructure.Repositories;
@@ -28,12 +29,13 @@ public class PageController : ControllerBase
         this.mapper = mapper;
     }
 
-    [HttpGet("unassigned")]
-    public async Task<IActionResult> UnassignedPages()
+    [HttpGet]
+    [Authorize(Roles = "Admin,Manager")]
+    public async Task<IActionResult> Pages([FromQuery] PageQuery pageQuery)
     {
-        var pages = await pageRepository.GetUnassignedPages();
+        var pages = await pageRepository.GetAllAsync(pageQuery);
 
-        return Ok(new Response<List<Page>>(pages));
+        return Ok(new Response<PaginatedResult<Page>>(pages));
     }
 
     [HttpGet("{id}")]

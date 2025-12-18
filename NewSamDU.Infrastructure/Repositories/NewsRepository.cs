@@ -41,6 +41,8 @@ public class NewsRepository : BaseRepository<News>
                         : lang == "kr" ? n.DescriptionKr
                         : n.DescriptionUz
                     ) ?? n.DescriptionUz!,
+
+                MainImagePath = n.MainImagePath,
                 CreatedAt = n.CreatedAt,
                 UpdatedAt = n.UpdatedAt,
             })

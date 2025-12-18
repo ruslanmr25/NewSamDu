@@ -115,9 +115,10 @@ public class NewsRepository : BaseRepository<News>
                     lang == "en" ? n.ContentEn
                     : lang == "ru" ? n.ContentRu
                     : lang == "kr" ? n.ContentKr
-                    : n.ContentEn
+                    : n.ContentUz
                 ) ?? n.ContentUz!,
             CreatedAt = n.CreatedAt,
+            MainImagePath = n.MainImagePath,
             UpdatedAt = n.UpdatedAt,
         };
 

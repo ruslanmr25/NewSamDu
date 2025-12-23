@@ -105,7 +105,7 @@ builder.Services.AddRateLimiter(options =>
             ip,
             partition => new FixedWindowRateLimiterOptions
             {
-                PermitLimit = 50,
+                PermitLimit = 500,
 
                 Window = TimeSpan.FromSeconds(10),
             }

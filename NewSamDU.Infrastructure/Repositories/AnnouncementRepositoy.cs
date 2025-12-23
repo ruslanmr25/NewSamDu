@@ -42,6 +42,8 @@ public class AnnouncementRepositoy : BaseRepository<Announcement>
                         : n.DescriptionUz
                     ) ?? n.DescriptionUz!,
                 CreatedAt = n.CreatedAt,
+                MainImagePath = n.MainImagePath,
+
                 UpdatedAt = n.UpdatedAt,
             })
             .ToListAsync();
@@ -103,6 +105,7 @@ public class AnnouncementRepositoy : BaseRepository<Announcement>
                     : lang == "kr" ? n.TitleKr
                     : n.TitleUz
                 ) ?? n.TitleUz!,
+            MainImagePath = n.MainImagePath,
 
             Description =
                 (
